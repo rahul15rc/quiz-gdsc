@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap');
+
+body {
+font-family: 'Raleway', sans-serif;
+background-image: url(bg1.jpeg);
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+padding: 30px;
+}
+
+.title {
+font-size: 40px;
+margin-top: 80px;
+margin-bottom: 60px;
+color: #e6ac1a;
+}
+
+.container {
+display: none;
+background-color: #d6dfe0;
+padding: 40px;
+margin-top: 10px;
+margin: auto;
+flex-direction: column;
+align-items: center;
+max-width: 900px;
+border-radius: 4px;
+border: solid #2c9180 1px;
+}
+
+.info {
+display: flex;
+margin-bottom: 24px;
+}
+
+h1 {
+text-align: center;
+}
+
+h4 {
+font-weight: 600;
+margin: 0px 10px;
+font-size: large;
+}
+
+h4 > span {
+font-weight: 400;
+font-size: large;
+}
+
+.form {
+width: 100%;
+}
+
+.choices {
+display: flex;
+flex-direction: column;
+margin-left: 20px;
+margin-bottom: 24px;
+}
+
+.btn-cont {
+display: flex;
+flex-direction: row;
+justify-content: start;
+margin-left: 25%;
+margin-bottom: 24px;
+font-size: x-large;
+}
+
+.btn {
+border: none;
+padding: 8px 16px;
+border-radius: 4px;
+margin: 0px 10px;
+cursor: pointer;
+width: 150px;
+font-size: x-large;
+}
+
+.guess {
+margin-left: 60px;
+background-color: #e6ac1a;
+}
+
+.new {
+background-color: #9fb3af;
+}
+
+@media (max-width: 576px) {
+h1 {
+font-size: 24px;
+}
+
+.info {
+flex-direction: column;
+}
+.options {
+    font-size: x-large;
+    color: #38b09c;
+}
+}
