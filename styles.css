@@ -26,7 +26,7 @@ flex-direction: column;
 align-items: center;
 max-width: 900px;
 border-radius: 4px;
-border: solid #2c9180 1px;
+border: solid black 4px;
 }
 
 .info {
@@ -65,12 +65,15 @@ display: flex;
 flex-direction: row;
 justify-content: start;
 margin-left: 25%;
+margin-right: 25%;
 margin-bottom: 24px;
-font-size: x-large;
+font-size: xs-large;
 }
 
 .btn {
-border: none;
+display: flex;
+flex-direction: row;
+border: 2px solid black;
 padding: 8px 16px;
 border-radius: 4px;
 margin: 0px 10px;
@@ -80,8 +83,8 @@ font-size: x-large;
 }
 
 .guess {
-margin-left: 60px;
 background-color: #e6ac1a;
+font-size: xx-large;
 }
 
 .new {
@@ -89,15 +92,16 @@ background-color: #9fb3af;
 }
 
 @media (max-width: 576px) {
-h1 {
-font-size: 24px;
-}
+    h1 {
+    font-size: 24px;
+    }
 
-.info {
-flex-direction: column;
-}
-.options {
+    .info {
+    flex-direction: column;
+    }
+    
+    .options {
     font-size: x-large;
     color: #38b09c;
-}
+    }
 }
