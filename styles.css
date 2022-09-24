@@ -83,12 +83,25 @@ font-size: x-large;
 }
 
 .guess {
+background-color: white;
+color: black;
+border: 2px solid #e6ac1a;
+}
+.guess:hover {
 background-color: #e6ac1a;
-font-size: xx-large;
+color: white;
+border: 1px solid black;
 }
 
 .new {
-background-color: #9fb3af;
+background-color: white;
+color: black;
+border: 2px solid #e6ac1a;
+}
+.new:hover {
+background-color: #e6ac1a;
+color: white;
+border: 1px solid black;    
 }
 
 @media (max-width: 576px) {
