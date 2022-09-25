@@ -1,4 +1,21 @@
-const url = 'https://opentdb.com/api.php?amount=1&type=multiple';
+
+var score = localStorage.getItem('counter1');
+var n = localStorage.getItem('counter');
+if (n === null) {
+    n = 0;
+} else {
+    n++;
+}
+if (n % 10 === 0) {
+    alert("Quiz complete! You scored: " + score);
+    n = 0;
+    score = 0;
+}
+console.log("n = " + n);
+localStorage.setItem("counter", n);
+console.log("Score = " + score);
+
+const url = 'https://opentdb.com/api.php?amount=1';
 
 async function getTrivia() {
 let response = await fetch(url);
@@ -40,8 +57,13 @@ document.querySelectorAll('input[name="choice"]').forEach((el) => {
 
     if (el.value === results.correct_answer) {
         result.innerHTML = "Correct Answer! 😎";
-    } else
+        score++;
+        localStorage.setItem("counter1", score);
+    }
+    else {
         result.innerHTML = `Incorrect Answer 😢 The correct answer is ${results.correct_answer}.`;
+        location.reload();
+    }
     }
 });
 });
