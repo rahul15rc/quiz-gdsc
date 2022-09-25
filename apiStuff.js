@@ -62,7 +62,6 @@ document.querySelectorAll('input[name="choice"]').forEach((el) => {
     }
     else {
         result.innerHTML = `Incorrect Answer 😢 The correct answer is ${results.correct_answer}.`;
-        location.reload();
     }
     }
 });
