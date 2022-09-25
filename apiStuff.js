@@ -6,8 +6,13 @@ if (n === null) {
 } else {
     n++;
 }
-if (n % 10 === 0) {
-    alert("Quiz complete! You scored: " + score);
+if (n === 10) {
+    if (score > 10) {
+        alert("Quiz complete! Couldn't load score.")   
+    }
+    else {
+        alert("Quiz complete! You scored: " + score);
+    }
     n = 0;
     score = 0;
 }
@@ -15,7 +20,7 @@ console.log("n = " + n);
 localStorage.setItem("counter", n);
 console.log("Score = " + score);
 
-const url = 'https://opentdb.com/api.php?amount=1';
+const url = 'https://opentdb.com/api.php?amount=10';
 
 async function getTrivia() {
 let response = await fetch(url);
