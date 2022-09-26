@@ -20,7 +20,7 @@ console.log("n = " + n);
 localStorage.setItem("counter", n);
 console.log("Score = " + score);
 
-const url = 'https://opentdb.com/api.php?amount=10&category=31';
+const url = 'https://opentdb.com/api.php?amount=10';
 
 async function getTrivia() {
 let response = await fetch(url);
