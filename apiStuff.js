@@ -6,9 +6,17 @@ if (n === null) {
 } else {
     n++;
 }
-if (n === 10) {
+if (score === null) {
+    score = 0;
+    location.reload();
+}
+if (n === 1)
+{
+    score = 0;
+}
+if (n === 10 || score === null) {
     if (score > 10) {
-        alert("Quiz complete! Couldn't load score.")   
+        alert("Quiz complete! Couldn't load score.");  
     }
     else {
         alert("Quiz complete! You scored: " + score);
@@ -37,7 +45,6 @@ const s = Math.floor(Math.random() * (i + 1));
 
 getTrivia().then((data) => {
 const results = data.results[0];
-console.log(results);
 document.getElementById('question').innerHTML = results.question;
 document.getElementById('category').innerHTML = results.category;
 const difficulty =
