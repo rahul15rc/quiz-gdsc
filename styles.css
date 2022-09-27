@@ -2,7 +2,7 @@
 
 body {
 font-family: 'Raleway', sans-serif;
-background-image: url(bg1.jpeg);
+background-image: url(bg-quiz.jpeg);
 background-repeat: no-repeat;
 background-size: cover;
 background-attachment: fixed;
@@ -81,12 +81,12 @@ width: 120px;
 font-size: x-large;
 }
 
-.guess {
+.submit {
 background-color: white;
 color: black;
 border: 2px solid #e6ac1a;
 }
-.guess:hover {
+.submit:hover {
 background-color: #e6ac1a;
 color: white;
 border: 1px solid black;
