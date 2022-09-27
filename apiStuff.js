@@ -1,18 +1,13 @@
-
 var score = localStorage.getItem('counter1');
 var n = localStorage.getItem('counter');
 if (n === null) {
-    n = 0;
-} else {
+    n = -1;
+}else {
     n++;
 }
 if (score === null) {
     score = 0;
     location.reload();
-}
-if (n === 1)
-{
-    score = 0;
 }
 if (n === 10 || score === null) {
     if (score > 10) {
@@ -28,7 +23,7 @@ console.log("n = " + n);
 localStorage.setItem("counter", n);
 console.log("Score = " + score);
 
-const url = 'https://opentdb.com/api.php?amount=10';
+const url = 'https://opentdb.com/api.php?amount=1';
 
 async function getTrivia() {
 let response = await fetch(url);
@@ -57,25 +52,25 @@ let index = i + 1;
 document.getElementById(`choice${index}label`).innerHTML = answers[i];
 document.getElementById(`choice${index}`).value = answers[i];
 }
-
 document.getElementById('display').style.display = 'flex';
-
-document.getElementById('guess').addEventListener('click', () => {
+document.getElementById('submit').addEventListener('click', () => {
 document.querySelectorAll('input[name="choice"]').forEach((el) => {
-    const result = document.getElementById('result');
-    if (el.checked) {
-    console.log(el.value);
-    console.log(results.correct_answer);
+const result = document.getElementById('result');
+if (el.checked) {
+console.log(el.value);
+console.log(results.correct_answer);
 
-    if (el.value === results.correct_answer) {
-        result.innerHTML = "Correct Answer! 😎";
-        score++;
-        localStorage.setItem("counter1", score);
-    }
-    else {
-        result.innerHTML = `Incorrect Answer 😢 The correct answer is ${results.correct_answer}.`;
-    }
-    }
+if (el.value === results.correct_answer) {
+    score++;
+    localStorage.setItem("counter1", score);
+    result.innerHTML = "Correct Answer! 😎";
+    
+    
+}
+else {
+    result.innerHTML = `Incorrect Answer 😢 The correct answer is ${results.correct_answer}.`;
+}
+}
 });
 });
 });
