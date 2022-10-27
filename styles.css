@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
-
 body {
 font-family: 'Poppins', sans-serif;
 background-image: url(bg-quiz.jpeg);
@@ -8,14 +7,12 @@ background-size: cover;
 background-attachment: fixed;
 padding: 30px;
 }
-
 .title {
 font-size: 40px;
 margin-top: 80px;
 margin-bottom: 60px;
-color: #e6ac1a;
+color:#ffb700;
 }
-
 .container {
 display: none;
 background-color: #d6dfe0;
@@ -28,38 +25,31 @@ max-width: 900px;
 border-radius: 4px;
 border: solid black 4px;
 }
-
 .info {
 display: flex;
 margin-bottom: 24px;
 }
-
 h1 {
 text-align: center;
 }
-
 h4 {
 font-weight: 600;
 margin: 0px 10px;
 font-size: large;
 }
-
 h4 > span {
 font-weight: 400;
 font-size: large;
 }
-
 .form {
 width: 100%;
 }
-
 .choices {
 display: flex;
 flex-direction: column;
 margin-left: 20px;
 margin-bottom: 24px;
 }
-
 .btn-cont {
 display: flex;
 flex-direction: row;
@@ -67,8 +57,8 @@ justify-content: start;
 margin-bottom: 24px;
 font-size: x-small;
 margin-left: 33.5%;
+margin-top: 80px;
 }
-
 .btn {
 display: flex;
 flex-direction: row;
@@ -80,7 +70,6 @@ cursor: pointer;
 width: 120px;
 font-size: x-large;
 }
-
 .submit {
 background-color: white;
 color: black;
@@ -91,7 +80,6 @@ background-color: #e6ac1a;
 color: white;
 border: 1px solid black;
 }
-
 .new {
 background-color: white;
 color: black;
@@ -102,16 +90,17 @@ background-color: #e6ac1a;
 color: white;
 border: 1px solid black;    
 }
-
+.note {
+color: rgb(236, 71, 71);
+text-align: center;
+}
 @media (max-width: 576px) {
     h1 {
     font-size: 24px;
     }
-
     .info {
     flex-direction: column;
     }
-    
     .options {
     font-size: x-large;
     color: #38b09c;
